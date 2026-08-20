@@ -66,9 +66,35 @@ Other forms (newsletter, volunteer interest, contact) are handled by
 - **Palette** — deep forest green (`#123b2e`), gold accent (`#c9a227`), warm cream (`#fbf8f3`)
 - **Type** — Source Serif 4 for headings, Inter for interface and body text (Google Fonts,
   with system fallbacks if offline)
-- **Layout** — CSS Grid and Flexbox, 1200px container, breakpoints at 1024 / 900 / 640px
+- **Layout** — CSS Grid and Flexbox, 1200px container
 - **Accessibility** — skip link, visible focus rings, labelled form fields, ARIA on the
   nav toggle, accordions and live regions, `prefers-reduced-motion` support, print styles
+
+## Responsive behaviour
+
+Breakpoints, largest to smallest:
+
+| Width | What changes |
+| --- | --- |
+| ≤ 1100px | Footer drops to three columns, brand block spans the row |
+| ≤ 1024px | 4-up grids become 2-up; the donation form and its summary stack |
+| ≤ 900px | Hamburger drawer replaces the nav; splits become single column; stats go 2-up |
+| ≤ 640px | Single-column grids, full-width buttons, 16px form text, 2-up amount chips, badge moves below its image |
+| ≤ 420px | Narrower page gutter (18px) |
+| ≤ 360px | Remaining 2-up grids collapse to one column |
+
+Notes on the mobile menu:
+
+- The drawer is `position: fixed` inside the header. Any `transform`, `filter`, or
+  `backdrop-filter` on an ancestor makes that ancestor the containing block for fixed
+  descendants — which would clip the drawer to the header's height. `.site-header`
+  therefore turns its `backdrop-filter` **off** at ≤900px. Keep it that way.
+- The toggle button sits above the drawer (`z-index: 106` vs `105`) so it stays tappable
+  and animates into an X to close. Tapping the backdrop, pressing Escape, choosing a link,
+  or resizing past 900px all close it too.
+- Tables scroll horizontally inside `.table-wrap`. `setupTableHints()` in `main.js`
+  measures each wrapper and reveals its "scroll sideways" hint only when it actually
+  overflows, at any width.
 
 ## Images
 

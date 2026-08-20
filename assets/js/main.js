@@ -13,6 +13,7 @@
     setupReveal();
     setupDemoForms();
     setupImageFallbacks();
+    setupTableHints();
     setCurrentYear();
   });
 
@@ -230,6 +231,23 @@
         img.style.minHeight = '180px';
       });
     });
+  }
+
+  /* ---------- Table scroll hints --------------------------------------- */
+  function setupTableHints() {
+    var wraps = document.querySelectorAll('.table-wrap');
+    if (!wraps.length) return;
+
+    function update() {
+      Array.prototype.forEach.call(wraps, function (wrap) {
+        var hint = wrap.nextElementSibling;
+        if (!hint || !hint.classList.contains('table-hint')) return;
+        hint.classList.toggle('is-visible', wrap.scrollWidth > wrap.clientWidth + 1);
+      });
+    }
+
+    update();
+    window.addEventListener('resize', update);
   }
 
   /* ---------- Footer year ---------------------------------------------- */
