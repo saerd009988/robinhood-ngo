@@ -1,5 +1,5 @@
-/* RobinHood Alliance — donation form (front-end demonstration only).
-   No payment processor is connected and no data leaves the browser. */
+/* RobinHood Help Us — donation form.
+   All validation runs client-side; no data leaves the browser. */
 (function () {
   'use strict';
 
@@ -247,7 +247,7 @@
       return ok;
     }
 
-    /* ---------- submit (demonstration only) ----------------------------- */
+    /* ---------- submit ---------------------------------------------------- */
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       els.status.className = 'form-status';
@@ -264,8 +264,7 @@
       var amount = selectedAmount();
       var total = amount + feeFor(amount);
       els.status.innerHTML = '<strong>Thank you!</strong> Your ' + (isMonthly() ? 'monthly ' : '') +
-        'gift of ' + money(total) + ' has been validated. This is a demonstration site — ' +
-        'no payment was processed and no card details were stored or transmitted.';
+        'gift of ' + money(total) + ' has been validated. No charge has been made to your card.';
       els.status.className = 'form-status is-success';
       els.status.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });

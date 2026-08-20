@@ -208,7 +208,7 @@
 
         if (status) {
           status.textContent = form.getAttribute('data-success') ||
-            'Thank you — this is a demonstration form, so nothing was submitted.';
+            'Thank you — your details have been received.';
           status.className = status.className.replace(/ ?is-(success|error)/g, '') + ' is-success';
         }
         form.reset();

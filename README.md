@@ -1,4 +1,4 @@
-# RobinHood — NGO Sample Website
+# RobinHood Help Us — NGO Sample Website
 
 A complete, static marketing website for a fictional US-based nonprofit, built with plain
 HTML, CSS and JavaScript. No build step, no frameworks, no dependencies.
@@ -114,10 +114,11 @@ fully offline, download the images into `assets/img/` and update the `src` attri
 ## Sample contact details used throughout
 
 ```
-RobinHood Alliance, Inc.
+RobinHood Help Us, Inc.
 1750 Sherman Street, Suite 900
 Denver, CO 80203
-(303) 555-0142 · hello@robinhood-alliance.org
+(636) 389-7052 · hello@robinhoodhelpus.org
 ```
 
-Phone numbers use the 555-01xx range reserved for fictional use.
+The main line is (636) 389-7052. Remaining department and regional numbers use the
+555-01xx range reserved for fictional use.
