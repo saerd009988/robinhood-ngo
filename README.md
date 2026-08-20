@@ -4,7 +4,7 @@ A complete, static marketing website for a fictional US-based nonprofit, built w
 HTML, CSS and JavaScript. No build step, no frameworks, no dependencies.
 
 > **This is a demonstration site.** RobinHood Alliance, Inc., its staff, statistics,
-> address, phone numbers, EIN and financials are all invented sample content created for
+> address, phone numbers and financials are all invented sample content created for
 > design purposes. The donation form validates input in the browser only — it is not
 > connected to a payment processor and never submits, stores or transmits anything.
 
@@ -28,6 +28,11 @@ python3 -m http.server 8000
 | `get-involved.html` | Get Involved | Volunteer roles + interest form, partnership options, events, career openings |
 | `donate.html` | Donate | One-time/monthly gift form with card fields, live summary, giving FAQ |
 | `contact.html` | Contact | Contact form, direct lines, regional offices, map, emergency assistance info |
+| `privacy.html` | Privacy Policy | What is collected, what is never done with it, cookies, donor rights, retention |
+| `terms.html` | Terms of Use | Permitted use, donation and recurring-gift terms, refunds, IP, liability |
+| `accessibility.html` | Accessibility | WCAG 2.1 AA target, what is built in, known limitations, accommodations |
+| `donor-rights.html` | Donor Bill of Rights | Ten donor commitments and how the board enforces them |
+| `state-disclosures.html` | State Disclosures | Per-state charitable solicitation notices (sample registration numbers) |
 
 ## Structure
 
@@ -35,6 +40,8 @@ python3 -m http.server 8000
 .
 ├── index.html  about.html  work.html  impact.html
 ├── get-involved.html  donate.html  contact.html
+├── privacy.html  terms.html  accessibility.html
+├── donor-rights.html  state-disclosures.html
 ├── assets/
 │   ├── css/style.css     # design system: tokens, components, responsive rules
 │   └── js/
@@ -111,7 +118,6 @@ RobinHood Alliance, Inc.
 1750 Sherman Street, Suite 900
 Denver, CO 80203
 (303) 555-0142 · hello@robinhood-alliance.org
-EIN 47-1234567 (fictional)
 ```
 
 Phone numbers use the 555-01xx range reserved for fictional use.

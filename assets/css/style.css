@@ -570,6 +570,43 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 .alloc__row { margin-bottom: 1rem; }
 .alloc__row .label { display: flex; justify-content: space-between; font-size: .9rem; margin-bottom: .4rem; color: var(--body); }
 
+/* 8b. Legal pages ======================================================== */
+.legal { max-width: 800px; }
+.legal-meta {
+  display: flex; flex-wrap: wrap; gap: .4rem 1.75rem; font-size: .9rem; color: var(--muted);
+  padding-bottom: 1.35rem; border-bottom: 1px solid var(--line); margin-bottom: 1.75rem;
+}
+.legal-note {
+  background: var(--gold-200); border-radius: var(--radius-sm); padding: 1rem 1.15rem;
+  font-size: .92rem; color: #6f5709; margin-bottom: 2.25rem;
+}
+.legal-toc { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem 1.75rem; margin-bottom: 2.75rem; }
+.legal-toc h2 {
+  font-family: var(--font-sans); font-size: .8rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: .9rem;
+}
+.legal-toc ol { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 2.5rem; }
+.legal-toc li { margin-bottom: .45rem; break-inside: avoid; font-size: .95rem; }
+.legal-section { margin-bottom: 2.5rem; scroll-margin-top: 130px; }
+.legal-section:last-child { margin-bottom: 0; }
+.legal-section h2 { font-size: 1.4rem; margin-bottom: .7rem; }
+.legal-section h3 { font-size: 1.06rem; margin: 1.5rem 0 .45rem; }
+.legal-section ul, .legal-section ol { padding-left: 1.3rem; }
+.legal-section li { margin-bottom: .5rem; }
+.state-block { border-top: 1px solid var(--line); padding: 1.35rem 0; }
+.state-block:last-child { border-bottom: 1px solid var(--line); }
+.state-block h3 { margin: 0 0 .4rem; font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); }
+.state-block p { font-size: .95rem; color: var(--body); margin: 0; }
+.rights-list { list-style: none; padding: 0; margin: 0; counter-reset: right; }
+.rights-list li { position: relative; padding-left: 3.25rem; margin-bottom: 1.5rem; }
+.rights-list li::before {
+  counter-increment: right; content: counter(right);
+  position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--green-100); color: var(--green-800); display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+}
+.rights-list strong { display: block; color: var(--ink); margin-bottom: .2rem; }
+
 /* 9. Footer ============================================================== */
 .site-footer { background: var(--green-900); color: #b9cdc3; padding: clamp(3rem, 6vw, 4.5rem) 0 2rem; font-size: .95rem; }
 .site-footer h3 { color: #fff; font-family: var(--font-sans); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1.1rem; }
@@ -712,6 +749,9 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   }
   .split__badge strong { font-size: 1.5rem; }
   .split__badge span { font-size: .85rem; }
+  .legal-toc ol { columns: 1; }
+  .legal-toc { padding: 1.25rem 1.35rem; }
+  .rights-list li { padding-left: 2.9rem; }
   .quote::before { font-size: 8rem; }
   .quote__person img { width: 46px; height: 46px; }
   .timeline li { padding-left: 2.5rem; }
