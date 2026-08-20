@@ -117,7 +117,7 @@ fully offline, download the images into `assets/img/` and update the `src` attri
 RobinHood Help Us, Inc.
 1750 Sherman Street, Suite 900
 Denver, CO 80203
-(636) 389-7052 · hello@robinhoodhelpus.org
+(636) 389-7052 · hello@robinhoodhelpus.com
 ```
 
 The main line is (636) 389-7052. Remaining department and regional numbers use the
